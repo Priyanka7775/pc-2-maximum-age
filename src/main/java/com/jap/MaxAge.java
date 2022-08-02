@@ -6,21 +6,22 @@ public class MaxAge {
     //inside the below method and return the calculated maximum age.
     public int getMaxAge(int [] age){
 
-        return 0;
-
+        int maximum=0;
+        for(int i=1;i<age.length;i++){
+            if(maximum<age[i]){
+                maximum=age[i];
+            }
+        }
+        return maximum;
     }
 
+
+
     public static void main(String[] args) {
-        //Declare and initialize values to the age array.
+        int []age = {23,34,33,24,25,26,31};
+        MaxAge maxAge= new MaxAge();
+        int max= maxAge.getMaxAge(age);
 
-        //Create an object of the class MaxAge
-
-        //Call the method getMaxAge and pass the parameter
-
-
-
-
-
-
+        System.out.print(max);
     }
 }
